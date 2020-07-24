@@ -1,0 +1,454 @@
+/*------------------------分割线-------------------------------------*/
+/*computer bigthan1200 start*/
+.banner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height:1000px;
+}
+.swiper-wrapper{
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+    height:100%;
+}
+.banner .banner-content {
+    position:absolute;
+    top:220px;
+    left: 50%;
+    transform:translateX(-50%);
+    width: 700px;
+    text-align: center;
+    color:#fff;
+}
+.banner .banner-content .banner-title{
+    font-size:96px;
+    font-weight: 700;
+}
+.banner .banner-content .tip{
+    font-size:30px;
+    margin:20px auto;
+}
+.banner .banner-content .div-line{
+    position: relative;
+    width:350px;
+}
+.banner .banner-content .line{
+    width:150px;
+    border-bottom:1px solid #fff
+}
+.banner .banner-content .div-line .circle{
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform:translateX(-50%);
+    width:12px;
+    height:12px;
+    background:#fff;
+    border-radius:50%;
+}
+.banner .banner-content .disc{
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-top: 40px;
+}
+.banner .banner-content .disc p{
+    margin-top: 15px;
+}
+.banner .swiper-button{
+    padding:20px 10px;
+    background-color:rgba(0,0,0,.3);
+    border-radius:10px;
+}
+.banner .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.94);
+    width: 45px;
+    height: 5px;
+    border-radius: 1px;
+}
+.banner .swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.content{
+    width: 100%;
+    min-width: 1100px;
+    padding: 100px 0 60px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.75;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f2f2;
+}
+.content .lists{
+    margin: 0 auto;
+    width: 1100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.content .lists ul{
+    padding-left: 4px;
+    position: relative;
+    width: 1100px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.content .lists ul li{
+    float: left;
+    display: inline-block;
+    width: 275px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    text-align: justify;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.content .lists ul li h3{
+    font-size:24px;
+    line-height: 40px;
+    font-weight: 400;
+    color:#2979fe;
+    text-align: center;
+}
+.content ul li p{
+    white-space: pre-wrap;
+}
+.content ul li hr{
+    width:45px;
+    border: 1px solid #999;
+    color:#999;
+    margin: 10px auto 20px;
+}
+
+.introduct{
+    width: 1100px;
+    padding: 60px 0;
+}
+.introduct .image{
+    width: 450px;
+    height: 350px;
+}
+.introduct .image img{
+    width: 100%;
+    height: 100%;
+}
+.introduct .discript{
+    width: 610px;
+    font-size: 20px;
+    color: #7f8c8d;
+    line-height: 40px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+.introduct .discript h3{
+    font-size: 36px;
+    color: #333;
+    line-height: 80px;
+}
+
+.introduction{
+    width: 100%;
+    position: relative;
+}
+.introduction img{
+    width: 100%;
+}
+.introduction .dis-img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1100px;
+}
+
+.technology{
+    width: 100%;
+    padding: 110px 0 0;
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+}
+.technology hr{
+    width: 60px;
+    color: #2979FE;
+    border: 1px solid #2979FE;
+}
+.technology img{
+    width: 1100px;
+    margin-top: -80px;
+}
+/*computer end*/
+
+/*-------------------------------------分割线-------------------------------------*/
+/*note start bettween 992px and 1199px*/
+@media screen and (min-width:992px) and (max-width:1199px){
+    .banner {
+        height:768px;
+    }
+    .banner .banner-content {
+        top:160px;
+    }
+    .banner .banner-content .banner-title{
+        font-size:70px;
+    }
+    .banner .banner-content .tip{
+        font-size:28px;
+    }
+    .banner .banner-content .div-line{
+        width:300px;
+    }
+    .banner .banner-content .line{
+        width:130px;
+    }
+    .banner .banner-content .disc{
+        margin-top: 35px;
+    }
+    .banner .banner-content .disc p{
+        margin-top: 10px;
+    }
+    .banner .swiper-button{
+        padding:15px 10px;
+        background-size: 20px 45px;
+    }
+    
+    .content{
+        min-width: 900px;
+        padding: 60px 0;
+    }
+    .content .list ul li h3{
+        font-size:22px;
+        line-height: 38px;
+    }
+    .content .lists ul li hr{
+        width:40px;
+    }
+    
+    .introduct{
+        width: 900px;
+    }
+    .introduct .image{
+        width: 400px;
+        height: 320px;
+    }
+    .introduct .discript{
+        width: 460px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .introduct .discript h3{
+        font-size: 32px;
+    }
+    .introduction .dis-img{
+        width: 900px;
+    }
+    
+    .technology{
+        padding: 60px 0 0;
+        font-size: 34px;
+    }
+    .technology img{
+        width: 900px;
+        margin-top: -60px;
+    }
+}
+/*note end*/
+
+/*-------------------------------------分割线----------------------------------*/
+/*ipad start betten 768px and 991px*/
+@media screen and (min-width:768px) and (max-width:991px){
+    .banner {
+        height:500px;
+    }
+    .banner .banner-content {
+        top:90px;
+        width: 580px;
+    }
+    .banner .banner-content .banner-title{
+        font-size:48px;
+    }
+    .banner .banner-content .tip{
+        font-size:20px;
+    }
+    .banner .banner-content .div-line{
+        width:210px;
+    }
+    .banner .banner-content .line{
+        width:90px;
+    }
+    .banner .banner-content .disc{
+        font-size: 14px;
+        line-height: 1.65;
+        margin-top: 30px;
+    }
+    .banner .banner-content .disc p{
+        margin-top: 10px;
+    }
+    .banner .swiper-button{
+        padding:10px;
+        background-size: 16px 45px;
+    }
+    
+    .content{
+        min-width: 700px;
+        padding: 40px 0;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .content .lists ul h3{
+        font-size:22px;
+        line-height: 36px;
+    }
+    .content .lists ul hr{
+        width:35px;
+        margin: 10px auto 15px;
+    }
+    
+    .introduct{
+        width: 700px;
+        padding: 40px 0;
+    }
+    .introduct .image{
+        width: 250px;
+        height: 200px;
+    }
+    .introduct .discript{
+        width: 430px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .introduct .discript h3{
+        font-size: 26px;
+        color: #333;
+        line-height: 56px;
+    }
+    
+    .introduction img,.introduction .dis-img{
+        width: 100%;
+    }
+    
+    .technology{
+        padding: 40px 0 0;
+        font-size: 30px;
+    }
+    .technology hr{
+        width: 54px;
+    }
+    .technology img{
+        width: 100%;
+        margin-top: -50px;
+    }
+}
+/*pad end*/
+
+/*-----------------------------------分割线-----------------------------------*/
+/*phone start little than 767px*/
+@media screen and (max-width: 767px) {
+    .banner {
+        height:480px;
+    }
+    .banner .banner-content {
+        top:65px;
+        width: 220px;
+    }
+    .banner .banner-content .banner-title{
+        font-size:20px;
+    }
+    .banner .banner-content .tip{
+        font-size:15px;
+        margin:10px auto;
+    }
+    .banner .banner-content .div-line{
+        width:160px;
+    }
+    .banner .banner-content .line{
+        width:60px;
+    }
+    .banner .banner-content .disc{
+        font-size: 12px;
+        line-height: 1.6;
+        margin-top: 18px;
+    }
+    .banner .banner-content .disc p{
+        margin-top: 5px;
+    }
+    .banner .swiper-button{
+        padding:0;
+        background-size: 14px 45px;
+    }
+    
+    .content{
+        min-width: 100%;
+        padding: 30px 15px 20px;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 1.7;
+        flex-direction: column;
+    }
+    .content .lists ul h3{
+        font-size:22px;
+        line-height: 30px;
+    }
+    .content .lists ul hr{
+        width:40px;
+        margin: 10px auto;
+    }
+    
+    .introduct{
+        width: 100%;
+        padding: 0 0 30px 0;
+    }
+    .introduct .image{
+        width: 100%;
+        height: auto;
+    }
+    .introduct .discript{
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: justify;
+        word-wrap: break-word;
+    }
+    .introduct .discript h3{
+        font-size: 24px;
+        line-height: 60px;
+    }
+    
+    .introduction{
+        width: 100%;
+        height: 160px;
+        position: relative;
+    }
+    .introduction img{
+        width: 100%;
+        height: 100%;
+    }
+    .introduction .dis-img{
+        width: 100%;
+    }
+    
+    .technology{
+        padding: 30px 0 0;
+        font-size: 26px;
+    }
+    .technology hr{
+        width: 40px;
+    }
+    .technology img{
+        width: 100%;
+        margin-top: -25px;
+    }
+}
+/*phone end*/
+
+
+
+
+
+

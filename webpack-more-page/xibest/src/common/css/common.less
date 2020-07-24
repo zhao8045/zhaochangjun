@@ -1,0 +1,221 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff;
+    color: #333;
+}
+ul,ol {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+select,input,img,select {
+    vertical-align: middle;
+}
+
+.m_auto {
+    margin: 0 auto;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.m_auto:before,
+.m_auto:after,
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+
+
+/*------------------------分割线-------------------------------------*/
+/*computer bigthan1200 start*/
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+}
+.header-content{
+    width: 1100px;
+}
+.header-content>.logo{
+    width: 130px;
+}
+.header-content>.logo>img{
+    width: 100%;
+}
+.header-content>.nav{
+    width: 200px;
+    margin-top:20px;
+    font-size:14px;
+}
+.header-content>.nav>li>a{
+    display: block;
+    width:100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color:#fff;
+}
+.header-content>.nav>li>a:hover{
+    border-bottom: 1px solid #1fd2f0;
+    color:#1fd2f0;
+}
+
+.footer{
+    background: #3C3C3C;
+    width:100%;
+}
+.footer .fonter-content {
+    width: 500px;
+    padding: 20px 0;
+    line-height: 20px;
+    font-size: 12px;
+    color: #c1c0c0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.footer .fonter-content .logo {
+    width: 107px;
+    margin-top: 8px;
+}
+.footer .fonter-content .logo img{
+    width:100%;
+}
+.footer .fonter-content .address {
+    padding: 10px 0;
+}
+.footer .wrapper .inner{
+    width: 100%;
+    padding: 6px 0;
+    line-height: 20px;
+    text-align: center;
+    background-color: #1D1D1D;
+    overflow: hidden;
+    color: #8b8b8b;
+    font-size: 12px;
+}
+.footer .wrapper .inner a{
+    color: #8b8b8b;
+}
+.footer .wrapper .inner i{
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    margin-right: 6px;
+    background: url(../img/police.png) 0 no-repeat;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+.footer .wrapper .inner a:hover{
+    color: #eee;
+}
+/*computer end*/
+
+
+/*-------------------------------------分割线-------------------------------------*/
+/*note start bettween 992px and 1199px*/
+@media screen and (min-width:992px) and (max-width:1199px){
+    .header-content{
+        width: 900px;
+    }
+    .header-content>.logo{
+        width:110px;
+    }
+    
+    .footer .fonter-content {
+        padding: 10px 0;
+    }
+    .footer .fonter-content .logo {
+        width: 100px;
+        margin-top: 10px;
+    }
+}
+/*note end*/
+
+
+/*-------------------------------------分割线----------------------------------*/
+/*ipad start betten 768px and 991px*/
+@media screen and (min-width:768px) and (max-width:991px){
+    .header-content{
+        width: 700px;
+    }
+    .header-content>.logo{
+        width:100px;
+    }
+    .header-content>.nav{
+        width: 180px;
+        margin-top:15px;
+    }
+    .header-content>.nav>li>a{
+        width:90px;
+    }
+    
+    .footer .fonter-content {
+        padding: 8px 0;
+        line-height: 18px;
+    }
+    .footer .fonter-content .logo {
+        width: 98px;
+    }
+}
+/*pad end*/
+
+/*-----------------------------------分割线-----------------------------------*/
+/*phone start little than 767px*/
+@media screen and (max-width: 767px) {
+    .header-content{
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .header-content>.logo{
+        width:70px;
+    }
+    .header-content>.nav{
+        width: 120px;
+        margin-top:10px;
+    }
+    .header-content>.nav>li>a{
+        display: inline-block;
+        width:auto;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .footer .fonter-content {
+        width: 100%;
+        padding: 10px 0;
+        line-height: 18px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer .fonter-content .logo {
+        width: 60px;
+        margin: 0 auto;
+    }
+    .footer .wrapper .inner a{
+        display: block;
+    }
+}
+/*phone end*/
+
+
