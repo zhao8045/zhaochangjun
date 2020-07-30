@@ -7,6 +7,7 @@ const webpack = require('webpack');//引入webpack
 const HtmlWebpackPlugin = require('html-webpack-plugin');//引入生成html文件插件（在html文件中自动引入js、css文件）
 const { _resolve, assetsPath } = require('./utils');//工具类提取_resolve,assetsPath方法
 const { entryList, pageList } = require('./setting.js');//引入setting.js 入口配置方法,与html生成配置
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const baseConf = {
   entry: entryList(),//入口生成配置
@@ -16,23 +17,27 @@ const baseConf = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-    	'vue': 'vue/dist/vue.min.js',
+	  'vue': 'vue/dist/vue.min.js',
       '@': _resolve('../src'),
       common: _resolve('../src/common')
     }
   },
   module: {
     rules: [
+	  {
+		test: /\.vue$/,
+		loader: 'vue-loader'
+	  },
       { 
       	test: /\.js$/,// 对 js 后缀名进行处理
       	use: 'babel-loader', //用bable-loader对es6、es7语法编译转换
       	include: _resolve('../src') //只处理src文件夹中的js文件
       }, 
       {
-			  test: /\.(htm|html)$/i,// 对 html后缀名进行处理
-	    	loader: 'html-withimg-loader',//用html-withimg-loader处理在html中引入图片的问题
-			  include: _resolve('../src') //只处理src文件夹中的html文件
-			},
+		test: /\.(htm|html)$/i,// 对 html后缀名进行处理
+		loader: 'html-withimg-loader',//用html-withimg-loader处理在html中引入图片的问题
+		  include: _resolve('../src') //只处理src文件夹中的html文件
+		},
       {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,// 对 图片文件 后缀名进行处理
         loader: 'url-loader',
@@ -59,6 +64,6 @@ const baseConf = {
       }
     ]
   },
-  plugins: [...pageList()]//html生成配置
+  plugins: [...pageList(),new VueLoaderPlugin()]//html生成配置
 };
 module.exports = baseConf;

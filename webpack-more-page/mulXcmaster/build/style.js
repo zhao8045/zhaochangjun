@@ -23,6 +23,7 @@ module.exports = {
     entryFiles.map((v, k) => {
       rules.push({
         test: new RegExp(`src(\\\\|\/)${v}(\\\\|\/).*\.(css|less)$`),
+		// test: /\.(css|less)$/,
         use: plugins[k].extract({
           fallback: 'style-loader',
           use: ['css-loader', 'postcss-loader', 'less-loader']

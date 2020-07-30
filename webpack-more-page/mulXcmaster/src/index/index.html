@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
-	
 	<head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	  <title>index</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>index</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+		<style>
+			[v-cloak] {
+				display: none;
+			}
+		</style>
 	</head>
 	
 	<body>
-	  <div>
-	  	<p>这是index测试页面</p>
-	  	<div id="index"></div>
-	  	<img src="../common/img/role.png"/>
-	  	<a class=" icon iconfont icon-qq"></a>
-	  	<a href="home.html">home</a>
-	  	<a class=" icon iconfont icon-denglu"></a>
-	  	<a href="about.html">about</a>
-	  	<video id="video" controls="controls" width="300px" height="200px"></video>
-	  </div>
-	  
-	  <script type="text/javascript" src="../www/common/js/commonutil.js" ></script>
+		<div id="app" v-cloak>
+			<Layout :activeIndex="activeIndex">
+				<div class="icon iconfont icon-denglu title">标题：<h3>买苹果！</h3></div>
+				
+				<el-row type="flex" justify="center">
+					<el-col :xs="22" :sm="20" :md="18" :lg="14" :xl="10">
+						<video id="video" ref="video" :src="mm" controls="controls" width="100%" height="auto"></video>
+					</el-col>
+				</el-row>
+				
+				<el-row type="flex" justify="center" :gutter="20">
+					<el-button size="mini" type="success" icon="el-icon-video-play" @click="play">播放</el-button>
+					<el-button size="mini" type="info" icon="el-icon-video-pause" @click="pause">暂停</el-button>
+				</el-row>
+				
+				<el-row type="flex" justify="center" :gutter="20">
+					<el-button-group>
+					  <el-button size="mini" type="primary" @click="speed(0.5)">0.5倍速</el-button>
+					  <el-button size="mini" type="success" @click="speed(1)">原速</el-button>
+					  <el-button size="mini" type="warning" @click="speed(1.5)">1.5倍速</el-button>
+					</el-button-group>
+				</el-row>
+			</Layout>
+		</div>
 	</body>
 </html>

@@ -36,9 +36,9 @@ module.exports = {
           //压缩配置
           minify: {
           	collapseWhitespace: true,//合并空格
-      			removeAttributeQuotes: true,//去除属性引号
-      			removeComments: true,//去除Html注释
-      			removeEmptyAttributes: true//去除空的属性
+			removeAttributeQuotes: true,//去除属性引号
+			removeComments: true,//去除Html注释
+			removeEmptyAttributes: true//去除空的属性
           },
           chunksSortMode: 'dependency'
         })

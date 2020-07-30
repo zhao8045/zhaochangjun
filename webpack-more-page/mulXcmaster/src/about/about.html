@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
-	
 	<head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	  <title>about</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>about</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+		<style>
+			[v-cloak] {
+				display: none;
+			}
+		</style>
 	</head>
 	
 	<body>
-	  <div id="app">
-	  	<p>这是第about页面</p>
-	  	<p>{{message}}</p>
-	  	<div id="about">{{tip}}</div>
-	  	<img src="../common/img/role.png"/>
-	  	<a class=" icon iconfont icon-qq"></a>
-	  	<a href="index.html">index</a>
-	  	<a class=" icon iconfont icon-qq"></a>
-	  	<a href="home.html">home</a>
-	  </div>
+		<div id="app" v-cloak>
+			<Layout :activeIndex="activeIndex">
+				<p>这是第about页面</p>
+				<p>{{message}}</p>
+				<div id="about">{{tip}}</div>
+				<img src="../common/img/role.png"/>
+				<a class=" icon iconfont icon-qq"></a>
+				<a href="index.html">index</a>
+				<a class=" icon iconfont icon-qq"></a>
+				<a href="home.html">home</a>
+				
+				<el-button>默认按钮</el-button>
+				<el-button type="primary">主要按钮</el-button>
+				<el-button type="success">成功按钮</el-button>
+				<el-button type="info">信息按钮</el-button>
+				<el-button type="warning">警告按钮</el-button>
+				<el-button type="danger">危险按钮</el-button>
+			</Layout>
+		</div>
 	</body>
 </html>

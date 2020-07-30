@@ -29,16 +29,16 @@ module.exports = {
       pageList.push(
         new HtmlWebpackPlugin({
           template: _resolve(`../src/${v}/${v}.html`),//来源html
-          filename: _resolve(`../www/${v}.html`),//生成的html
+          filename:_resolve(`../www/${v}.html`),//生成的html
           favicon: './src/common/favicon.ico', // 添加favicon小图标
           chunks: ['common', v],//需要引入的Chunk，不配置就会引入所有页面的资源
           
           //压缩配置
           minify: {
-          	collapseWhitespace: true,//合并空格
-      			removeAttributeQuotes: true,//去除属性引号
-      			removeComments: true,//去除Html注释
-      			removeEmptyAttributes: true//去除空的属性
+			collapseWhitespace: true,//合并空格
+			removeAttributeQuotes: true,//去除属性引号
+			removeComments: true,//去除Html注释
+			removeEmptyAttributes: true//去除空的属性
           },
           chunksSortMode: 'dependency'
         })
