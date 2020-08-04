@@ -17,22 +17,8 @@
 	
 	<body>
 		<div id="app" v-cloak>
-			<Layout :activeIndex="activeIndex">
-				<p>这是第about页面</p>
+			<Layout :active-index="activeIndex">
 				<p>{{message}}</p>
-				<div id="about">{{tip}}</div>
-				<img src="../common/img/role.png"/>
-				<a class=" icon iconfont icon-qq"></a>
-				<a href="index.html">index</a>
-				<a class=" icon iconfont icon-qq"></a>
-				<a href="home.html">home</a>
-				
-				<el-button>默认按钮</el-button>
-				<el-button type="primary">主要按钮</el-button>
-				<el-button type="success">成功按钮</el-button>
-				<el-button type="info">信息按钮</el-button>
-				<el-button type="warning">警告按钮</el-button>
-				<el-button type="danger">危险按钮</el-button>
 			</Layout>
 		</div>
 	</body>

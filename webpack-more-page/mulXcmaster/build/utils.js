@@ -4,7 +4,7 @@
 
 const path = require('path');//node 路径模块
 const config = require('../config');//config配置
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');//提取CSS插件
 const packageConfig = require('../package.json');//依赖
 
 exports._resolve=function(_path){
@@ -13,8 +13,6 @@ exports._resolve=function(_path){
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production' ? config.build.assetsSubDirectory : config.dev.assetsSubDirectory
-  
-  // return path.posix.join(config.build.assetsPath, _path) //将路径片段进行拼接
   return path.posix.join(assetsSubDirectory, _path) //将路径片段进行拼接
 }
 

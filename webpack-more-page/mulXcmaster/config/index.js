@@ -36,7 +36,7 @@ module.exports = {
 		assetsRoot: path.resolve(__dirname, '../www'),//返回一个相对于当前的工作目录的绝对路径
 	    assetsSubDirectory: './', //static
 		assetsPath: './',
-		productionSourceMap: true,
+		productionSourceMap: false,
 		devtool: false,//不生成source-map
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],

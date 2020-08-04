@@ -6,16 +6,13 @@ const path = require('path');//引入node路径模块
 const utils = require('./utils');//工具类方法
 const config = require('../config');//config配置
 const vueLoaderConfig = require('./vue-loader.conf');//vue-loader配置
-
-const webpack = require('webpack');//引入webpack
 const VueLoaderPlugin = require('vue-loader/lib/plugin');//vue-loader插件
-const HtmlWebpackPlugin = require('html-webpack-plugin');//引入生成html文件插件（在html文件中自动引入js、css文件）
 const { entryList, pageList } = require('./setting.js');//引入setting.js 入口配置方法,与html生成配置
 
-const baseConf = {
+module.exports = {
   entry: entryList(),//入口生成配置
   output: {
-	filename: '[name].js',//使用占位符来确保每个文件具有唯一的名称
+	filename: '[name].[hash].js',//使用占位符来确保每个文件具有唯一的名称
     path: config.build.assetsRoot, //所有输出文件的目标路径，必须是绝对路径
 	publicPath: process.env.NODE_ENV === 'production'? config.build.assetsPublicPath: config.dev.assetsPublicPath // 输出解析文件的目录，url 相对于 HTML 页面
   },
@@ -80,6 +77,5 @@ const baseConf = {
 	  tls: 'empty',
 	  child_process: 'empty'
   },
-  plugins: [...pageList(),new VueLoaderPlugin()]// 附加插件列表
+  plugins: [new VueLoaderPlugin(),...pageList()]// 附加插件列表
 };
-module.exports = baseConf;

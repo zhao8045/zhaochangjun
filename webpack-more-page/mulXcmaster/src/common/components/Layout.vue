@@ -33,24 +33,29 @@
 	export default {
 		name: 'Layout',
 		props: {
-			activeIndex: {
-			  type: String,
-			  default: () => false
+			activeIndex:{
+				type: String,
+				required: true
 			}
 		},
 		data() {
 			return {
 			  logo:logo
 			}
+		},
+		created(){
+			
 		}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.el-container {
 		height:100%;
 		.el-header{
-			border-bottom: solid 1px #e6e6e6;
+			height: auto !important;
+			background: #fff;
+			border-bottom:1px solid #e6e6e6;
 			.nav{
 				display: flex;
 				flex-wrap: nowrap;
@@ -61,8 +66,18 @@
 					height: 50px;
 					vertical-align: middle;
 				}
-				.el-menu-item{
-					padding: 0 10px;
+				.el-menu{
+					&.el-menu--horizontal{
+						border:none;
+					}
+					.el-menu-item{
+						padding: 0 10px;
+						a{
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+					}
 				}
 			}
 		}

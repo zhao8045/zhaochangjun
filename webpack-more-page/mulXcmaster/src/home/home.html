@@ -17,14 +17,14 @@
 	
 	<body>
 		<div id="app" v-cloak>
-			<Layout :activeIndex="activeIndex">
-				<p>这是home页面</p>
-				<div id="home"></div>
-				<img src="../common/img/role.png"/>
-				<a class=" icon iconfont icon-qq"></a>
-				<a href="index.html">index</a>
-				<a class=" icon iconfont icon-qq"></a>
-				<a href="about.html">about</a>
+			<Layout :active-index="activeIndex">
+				<div class="icon iconfont icon-denglu title">标题：<h3>打飞机！</h3></div>
+				
+				<el-row type="flex" justify="center">
+					<el-col :xs="22" :sm="20" :md="18" :lg="14" :xl="10">
+						<canvas id="canvas" ref="canvas" width="260" height="360"></canvas>
+					</el-col>
+				</el-row>
 			</Layout>
 		</div>
 	</body>

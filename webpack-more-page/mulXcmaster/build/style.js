@@ -1,13 +1,14 @@
 /*css文件生成*/
 
+'use strict';//严格模式
 
 const path = require('path');//node 路径模块
 const ExtractTextPlugin = require('extract-text-webpack-plugin');//引入能把css文件提取出来的插件
-const { entryList, entryFiles } = require('./setting.js');//引入setting.js入口配置 方法和入口文件
+const { entryFiles } = require('./setting.js');//引入setting.js入口配置 方法和入口文件
 
 //多个css文件插件ExtractTextPlugin实例
 const plugins = [];
-entryFiles.map(v => {
+entryFiles.map((v,k) => {
   plugins.push(
     new ExtractTextPlugin({
       filename: `css/${v}.[contenthash].css`,

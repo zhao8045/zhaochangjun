@@ -16,8 +16,11 @@ const portfinder = require('portfinder');//自动获取端口
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+const { rulesList, stylePlugins } = require('./style');//style.js的rulesList、stylePlugins方法
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
+	// rules: [...rulesList()]
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
   devtool: config.dev.devtool,//生成source-map（使调试更容易）
@@ -25,8 +28,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 	clientLogLevel: 'warning',//配置在客户端的日志等级，这会影响到你在控制台里看到的日志内容。clientLogLevel 是枚举类型，可取如下之一的值 none | error | warning | info。 默认为 info 级别，即输出所有类型的日志，设置成 none 可以不输出任何日志。
     historyApiFallback:false,//如果为true所有跳转将指向index.html（这会导致任何请求都会返回index.html文件，这用于只有一个HTML文件的单页应用。）
 	hot: true,//是否启用模块热替换功能，DevServer默认的行为是在发现源代码被更新后会通过自动刷新整个页面来做到实现预览，开启模块热替换功能后在不刷新整个页面的情况下通过用新模块替换老模块来实现实时预览
-	contentBase: "./",// 配置DevServer服务器的文件根目录，默认为当前执行目录，一般不必设置它，除非有额外的文件需要被DevServer服务。我们设在当前目录即可
-	// contentBase: false, // 因为我们使用CopyWebpackPlugin)
+	contentBase: false, //配置DevServer服务器的文件根目录，默认为当前执行目录，一般不必设置它，除非有额外的文件需要被DevServer服务。我们设在当前目录即可，因为我们使用CopyWebpackPlugin)
   	compress: true,//配置是否启用 gzip 压缩，默认为 false。
     
   //  https:true,//DevServer 默认使用 HTTP 协议服务，它也能通过 HTTPS 协议服务, 有些情况下你必须使用 HTTPS
@@ -43,12 +45,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 	}
   },
 	
-  //测试环境出口
-  output: {
-	filename: '[name].[hash].js',
-    publicPath: ''
-  },
-  
   plugins: [
     new webpack.DefinePlugin({
 	  'process.env': require('../config/dev.env')
