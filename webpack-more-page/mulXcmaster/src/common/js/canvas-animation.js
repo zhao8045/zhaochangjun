@@ -18,11 +18,13 @@
 			n:o(v,"count",200)//线条数量
 		}
 	}
+	
 	//获取窗口宽高
 	function k(){
 		r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;//获取窗口的宽度
 		n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight//获取窗口的高度
 	}
+	
 	//canvas实现
 	function b(){
 		e.clearRect(0,0,r,n);
